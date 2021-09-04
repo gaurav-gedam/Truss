@@ -1,23 +1,8 @@
-# Import a STEP file containing wireframe geometry of a strucure with gmsh and export the mesh data
+# Read an existing msh file and prepare element topology data arrays
 
 def oneDmesh():
     import gmsh
     gmsh.initialize()
-    # gmsh.model.add("mesh")
-    
-
-    # For auto meshing a geometry file
-#    path = os.path.dirname(os.path.abspath(__file__))
-#    gmsh.model.occ.importShapes(os.path.join(path, fname))
-    
-    # gmsh.model.occ.importShapes(fname)
-    # gmsh.model.occ.synchronize()
-    
-    # gmsh.model.mesh.generate(1)
-    # gmsh.write("mesh.msh")
-    
-    # For opening a mesh
-    
     gmsh.open('mesh.msh')
     
     import numpy as np
